@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CARP</title>
+</head>
+<body>
+    Hello Carp!
+    <h3>Total</h3>
+    <table>
+        <tr><th>Totals</th><th>タイプ</th><th>件数</th></tr>
+    {% for total in totals %}
+        <tr><td></td><td>{{ total[0] }}</td><td>{{ total[1] }}</td></tr>
+    {% endfor %}
+    </table>
+
+    <h3>一覧</h3>
+    <table>
+        <tr><th>sentimental</th><th>mixed</th><th>neutral</th><th>negative</th><th>positive</th><th>created_at</th></tr>
+    {% for sentimental in sentimentals %}
+        <tr><td>{{ sentimental.sentimental }}</td><td>{{ sentimental.mixed }}</td><td>{{ sentimental.neutral }}</td><td>{{ sentimental.negative }}</td><td>{{ sentimental.positive }}</td><td>{{ sentimental.created_at }}</td></tr>
+    {% endfor %}
+    </table>
+
+</body>
+</html>
